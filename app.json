@@ -2,7 +2,7 @@
   "name": "Cetax api",
   "description": "",
   "keywords": [],
-  "repository": "",
+  "repository": "https://github.com/cetaxconsultoria/facebookapi",
   "success_url": "/",
   "env": {
     "SECRET_KEY": {
