@@ -1,0 +1,6 @@
+{% extends "rest_framework/login_base.html" %}
+
+{% block branding %}
+    <h3 style="margin: 0 0 20px;">CetaxAPI</h3>
+    <a href="{% url 'fb_login:facebook_login' %}">Login com Facebook</a>
+{% endblock %}

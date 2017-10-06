@@ -1,0 +1,37 @@
+{
+  "name": "Cetax api",
+  "description": "",
+  "keywords": [],
+  "repository": "",
+  "success_url": "/",
+  "env": {
+    "SECRET_KEY": {
+      "description": "String longa e aleatória usada como chave de encriptação das comunicações do site.",
+      "generator": "secret"
+    },
+    "EMAIL_ACCOUNT": {
+      "description": "Conta de email de onde serão enviados os emails do site. Use uma existente.",
+      "value": ""
+    },
+    "EMAIL_PASSWORD": {
+      "description": "Senha do email ai de cima, pra ser possível enviar emails.",
+      "value": ""
+    },
+    "ADMIN_ACCOUNT": {
+      "description": "Email do admnistrador que vai receber os error reports",
+      "value": ""
+    },
+    "FACEBOOK_KEY": {
+      "description": "App ID do seu App no Facebook",
+      "value": ""
+    },
+    "FACEBOOK_SECRET": {
+      "description": "App Secret do seu App no Facebook",
+      "value": ""
+    },
+    "FACEBOOK_PAGE_TOKEN": {
+      "description": "Token permanente de acesso da sua página",
+      "value": ""
+    },
+  }
+}

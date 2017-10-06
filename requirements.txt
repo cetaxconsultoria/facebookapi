@@ -1,0 +1,12 @@
+dj-database-url
+Django
+gunicorn
+psycopg2
+whitenoise
+-e git+https://github.com/mobolic/facebook-sdk.git#egg=facebook-sdk
+django-recaptcha
+djangorestframework
+django-filter
+django-crispy-forms
+rest_condition
+requests
