@@ -176,4 +176,4 @@ ADMINS = [('Admin', str(os.environ.get('ADMIN_ACCOUNT'))), ]
 FACEBOOK_KEY = os.environ.get('FACEBOOK_KEY')
 FACEBOOK_SECRET = os.environ.get('FACEBOOK_SECRET')
 FACEBOOK_PAGE_TOKEN = os.environ.get('FACEBOOK_PAGE_TOKEN')
-FACEBOOK_PERMISSIONS = ['manage_pages', 'pages_show_list']
+FACEBOOK_PERMISSIONS = ['manage_pages', 'pages_show_list', 'ads_management']

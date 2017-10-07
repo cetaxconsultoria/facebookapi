@@ -35,7 +35,8 @@ class FacebookUser(models.Model):
 
     @property
     def pages(self):
-        return get_graph(self.access_token).get_object(self.social_id + '/accounts')
+        l =
+        return get_graph(self.access_token).get_object(self.social_id + '/accounts?fields=about,name,id,category')
 
     @property
     def is_expired(self):

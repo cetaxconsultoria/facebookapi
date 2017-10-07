@@ -10,7 +10,6 @@ from rest_framework import generics
 from rest_framework import filters
 from rest_condition import Or
 from .roles import IsFreeUser, IsPayingUser
-from rest_framework.reverse import reverse
 
 # Create your views here.
 
@@ -40,5 +39,5 @@ class PageInfo(APIView):
         content = {
             'page_id': request.GET['id'],
         }
-        response = get_graph().get_object(content['page_id'] + "?fields=posts{likes{name},comments,message}")
+        response = get_graph().get_object(content['page_id'] + "?fields=feed{comments{id,likes{name,id,username},comment_count,message},reactions{id,name,username}},about,id,name")
         return Response(response)

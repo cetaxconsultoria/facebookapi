@@ -8,7 +8,7 @@ class FBUserSerializer(serializers.ModelSerializer):
     pages = serializers.SerializerMethodField('page_list')
 
     def user_info(self, arg):
-        return {"id": arg.user.id, "username": arg.user.username, "token": arg.user.auth_token.key}
+        return {"id": arg.user.id, "username": arg.user.username}
 
     def page_list(self, arg):
         resp = arg.pages
@@ -16,4 +16,4 @@ class FBUserSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = FacebookUser
-        fields = ('access_token', 'first_name', 'name', 'link', 'user', 'social_id', 'is_expired', 'pages', 'updated_at')
+        fields = ('first_name', 'name', 'link', 'user', 'social_id', 'is_expired', 'pages', 'updated_at')
