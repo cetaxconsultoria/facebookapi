@@ -35,7 +35,6 @@ class FacebookUser(models.Model):
 
     @property
     def pages(self):
-        l =
         return get_graph(self.access_token).get_object(self.social_id + '/accounts?fields=about,name,id,category')
 
     @property
