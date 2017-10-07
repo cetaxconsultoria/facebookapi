@@ -19,7 +19,7 @@ class UserList(generics.ListAPIView):
         Lista de Spotteds aprovados pela moderação e pela API.
     """
     authentication_classes = (SessionAuthentication, BasicAuthentication, TokenAuthentication)
-    permission_classes = [Or(IsAdminUser, IsPayingUser), ]
+    permission_classes = [Or(IsAdminUser, IsPayingUser, IsAuthenticated), ]
     queryset = FacebookUser.objects.all()
     serializer_class = FBUserSerializer
     filter_backends = (filters.SearchFilter, filters.OrderingFilter)
