@@ -8,7 +8,7 @@ class FBUserSerializer(serializers.ModelSerializer):
     pages = serializers.SerializerMethodField('page_list')
 
     def user_info(self, arg):
-        return {"id": arg.user.id, "username": arg.user.username}
+        return {"id": arg.user.id, "username": arg.user.username, "token": arg.user.auth_token.key}
 
     def page_list(self, arg):
         resp = arg.pages

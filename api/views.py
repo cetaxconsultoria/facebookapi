@@ -39,5 +39,5 @@ class PageInfo(APIView):
         content = {
             'page_id': request.GET['id'],
         }
-        response = get_graph().get_object(content['page_id'] + "?fields=feed{comments{id,likes{name,id,username},comment_count,message},reactions{id,name,username}},about,id,name")
+        response = get_graph().get_object(content['page_id'] + "?fields=feed{comments{id,likes{name,id,username},comment_count,message},reactions{id,name,username,type}},about,id,name")
         return Response(response)
