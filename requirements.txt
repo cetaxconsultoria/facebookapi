@@ -10,3 +10,4 @@ django-filter
 django-crispy-forms
 rest_condition
 requests
+tweepy
